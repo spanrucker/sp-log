@@ -15,7 +15,7 @@ for file in $list
 do
     # set up variables
     pagenum=$((postnum/pagemax))
-    remainder=$((postnum%5))
+    remainder=$((postnum%pagemax))
     fileandext="${file##*/}"
     extension="${fileandext##*.}"
     filename="${fileandext%.*}"
