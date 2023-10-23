@@ -5,7 +5,7 @@ postnum=0
 pagemax=10
 posts=( $list )
 target=index
-sitename="s.panrucker"
+sitename="splog"
 siteurl="https://s.panrucker.co"
 
 
@@ -51,7 +51,7 @@ do
     # rss construction
 
     echo "<item>" >> rss.xml
-    echo "<title>s.panrucker</title>" >> rss.xml
+    echo "<title>splog</title>" >> rss.xml
     echo "<link>https://s.panrucker.co</link>" >> rss.xml
     echo "<guid>https://s.panrucker.co/$filename.html</guid>" >> rss.xml
     echo "<description><![CDATA[" >> rss.xml
@@ -61,10 +61,10 @@ do
 
     if [[ "$extension" == "mp3" ]]; then
         echo "<p><audio src=\"$file\" controls>$file</audio></p>" | tee -a $target.html >>$filename.html
-        echo "New audio post on s.panrucker" >>rss.xml
+        echo "New audio post on splog" >>rss.xml
     elif [[ "$extension" == "md" ]]; then
         cmark --unsafe ${file} | tee -a $target.html >>$filename.html 
-        echo "New text post on s.panrucker" >>rss.xml
+        echo "New text post on splog" >>rss.xml
 
     elif [[ "$extension" == "jpg" ]] || [[ "$extension" == "JPG" ]]; then
         if [ ! -d "./image/big" ]; then
@@ -75,7 +75,7 @@ do
         convert $file -resize "2400>" ./image/big/$filename.jpg
         fi
         echo "<p><a href=\"./image/big/$filename.jpg\"><img alt="$filename" src=\"./image/$filename.jpg\"></a>" | tee -a $target.html >>$filename.html 
-        echo "New image post on s.panrucker" >>rss.xml
+        echo "New image post on splog" >>rss.xml
     fi
 
     # add caption if .txt file found
