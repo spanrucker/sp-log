@@ -2,7 +2,7 @@
 
 list=$(ls -r ./post/* | grep -E -i '\.md$|\.mp3$|\.jpg$')
 postnum=0
-pagemax=5
+pagemax=10
 posts=( $list )
 target=index
 sitename="s.panrucker"
