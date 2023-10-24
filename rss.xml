@@ -1,8 +1,9 @@
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>simon's log</title>
 <link>https://log.panrucker.co</link>
 <description><![CDATA[simon panrucker's creative log]]></description>
+<atom:link href="https://log.panrucker.co/rss.xml" rel="self" type="application/rss+xml" />
 <item>
 <title>2023-10-23-cheese-moon</title>
 <link>https://log.panrucker.co</link>

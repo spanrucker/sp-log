@@ -1,5 +1,6 @@
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>{{SITE_NAME}}</title>
 <link>{{SITE_URL}}</link>
 <description><![CDATA[{{SITE_DESCRIPTION}}]]></description>
+<atom:link href="{{SITE_URL}}/rss.xml" rel="self" type="application/rss+xml" />
