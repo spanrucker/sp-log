@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>simon's log</title>
-<link>https://spanrucker.github.io/sp-log/</link>
+<link>https://spanrucker.github.io/sp-log</link>
 <description><![CDATA[simon panrucker's creative log]]></description>
-<atom:link href="https://spanrucker.github.io/sp-log//rss.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://spanrucker.github.io/sp-log/rss.xml" rel="self" type="application/rss+xml" />
 <item>
 <title>2023-10-23-cheese-moon</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2023-10-23-cheese-moon.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2023-10-23-cheese-moon.html</guid>
 <description><![CDATA[
 New text post on splog
 ]]></description>
@@ -15,8 +15,8 @@ New text post on splog
 </item>
 <item>
 <title>2023-10-21-youtube</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2023-10-21-youtube.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2023-10-21-youtube.html</guid>
 <description><![CDATA[
 New text post on splog
 ]]></description>
@@ -24,8 +24,8 @@ New text post on splog
 </item>
 <item>
 <title>2023-10-19</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2023-10-19.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2023-10-19.html</guid>
 <description><![CDATA[
 New text post on splog
 ]]></description>
@@ -33,8 +33,8 @@ New text post on splog
 </item>
 <item>
 <title>2023-10-08-shelter</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2023-10-08-shelter.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2023-10-08-shelter.html</guid>
 <description><![CDATA[
 New image post on splog
 ]]></description>
@@ -42,8 +42,8 @@ New image post on splog
 </item>
 <item>
 <title>2023-10-08</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2023-10-08.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2023-10-08.html</guid>
 <description><![CDATA[
 New image post on splog
 ]]></description>
@@ -51,8 +51,8 @@ New image post on splog
 </item>
 <item>
 <title>2023-07-01</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2023-07-01.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2023-07-01.html</guid>
 <description><![CDATA[
 New image post on splog
 ]]></description>
@@ -60,8 +60,8 @@ New image post on splog
 </item>
 <item>
 <title>2021-12-17-rainy-plain</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-12-17-rainy-plain.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-12-17-rainy-plain.html</guid>
 <description><![CDATA[
 New audio post on splog
 <p>I made this one with a synthesiser.</p>
@@ -70,8 +70,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-11-09-bottle-hopper</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-11-09-bottle-hopper.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-11-09-bottle-hopper.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>
@@ -79,8 +79,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-11-04-pretty-deadly-bloom</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-11-04-pretty-deadly-bloom.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-11-04-pretty-deadly-bloom.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>
@@ -88,8 +88,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-11-03-stop-fidgeting</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-11-03-stop-fidgeting.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-11-03-stop-fidgeting.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>
@@ -97,8 +97,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-11-02-space-whale</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-11-02-space-whale.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-11-02-space-whale.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>
@@ -106,8 +106,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-11-02-hermit-crab</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-11-02-hermit-crab.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-11-02-hermit-crab.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>
@@ -115,8 +115,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-10-21-funky-laundrette</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-10-21-funky-laundrette.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-10-21-funky-laundrette.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>
@@ -124,8 +124,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-10-20-cowboy-ultrabot</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-10-20-cowboy-ultrabot.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-10-20-cowboy-ultrabot.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>
@@ -133,8 +133,8 @@ New audio post on splog
 </item>
 <item>
 <title>2021-03-29-hot-cross-bunion</title>
-<link>https://spanrucker.github.io/sp-log/</link>
-<guid>https://spanrucker.github.io/sp-log//2021-03-29-hot-cross-bunion.html</guid>
+<link>https://spanrucker.github.io/sp-log</link>
+<guid>https://spanrucker.github.io/sp-log/2021-03-29-hot-cross-bunion.html</guid>
 <description><![CDATA[
 New audio post on splog
 ]]></description>

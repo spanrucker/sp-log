@@ -3,7 +3,7 @@
 # site config
 
 site_name="simon's log"
-site_url="https://spanrucker.github.io/sp-log/"
+site_url="https://spanrucker.github.io/sp-log"
 site_description="simon panrucker's creative log"
 site_footer="simon@simonpanrucker.com"
 posts_per_page=10
