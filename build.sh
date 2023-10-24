@@ -4,7 +4,7 @@
 
 site_name="simon's log"
 site_url="https://log.panrucker.co"
-site_description="<a href="https://www.simonpanrucker.com">simon panrucker's</a> creative log"
+site_description="simon panrucker's creative log"
 site_footer="simon@simonpanrucker.com"
 posts_per_page=10
 
@@ -66,7 +66,7 @@ do
 
     echo "<item>" >> rss.xml
     echo "<title>$filename</title>" >> rss.xml
-    echo "<link>$site_url<link>" >> rss.xml
+    echo "<link>$site_url</link>" >> rss.xml
     echo "<guid>$site_url/$filename.html</guid>" >> rss.xml
     echo "<description><![CDATA[" >> rss.xml
    
