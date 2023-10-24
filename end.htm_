@@ -1,5 +1,6 @@
+<footer>
 <hr>
-<p>s@panrucker.co</p>
-
+<p>{{SITE_FOOTER}}</p>
+</footer>
 </body>
 </html>

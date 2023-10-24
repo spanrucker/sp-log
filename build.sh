@@ -1,15 +1,27 @@
 #!/bin/bash
 
+# site config
+
+site_name="simon's log"
+site_url="https://log.panrucker.co"
+site_description="<a href="https://www.simonpanrucker.com">simon panrucker's</a> creative log"
+site_footer="simon@simonpanrucker.com"
+posts_per_page=10
+
+
+# set up variables
+
 list=$(ls -r ./post/* | grep -E -i '\.md$|\.mp3$|\.jpg$')
 postnum=0
-pagemax=10
 posts=( $list )
 target=index
-sitename="splog"
-siteurl="https://s.panrucker.co"
+pagemax=$posts_per_page
 
 
-cat rss_start.xml_ > rss.xml
+
+sed -e "s|{{SITE_NAME}}|$site_name|
+    s|{{SITE_URL}}|$site_url|
+    s|{{SITE_DESCRIPTION}}|$site_description|" rss_start.xml_ > rss.xml
 
 for file in $list 
 do
@@ -30,15 +42,17 @@ do
     fi
 
     if [[ $remainder = 0 ]]; then
-        cat start.htm_ > $target.html
+        sed -e "s|{{SITE_NAME}}|$site_name|
+        s|{{SITE_DESCRIPTION}}|$site_description|" start.htm_ > $target.html
                 if [[ $pagenum -eq 1 ]]; then
-            echo "<p><a href=\"index.html\">after &uarr;</a></p>" >> $target.html
+            echo "<p><a href=\"/\">after &uarr;</a></p>" >> $target.html
         elif [[ ! $pagenum -eq 0 ]]; then
             echo "<p><a href=\"$((pagenum - 1)).html\">&uarr; after</a></p>" >> $target.html
         fi
     fi
     
-    cat start.htm_ > $filename.html
+    sed -e "s|{{SITE_NAME}}|$site_name|
+        s|{{SITE_DESCRIPTION}}|$site_description|" start.htm_ > $filename.html
 
     # entry construction
 
@@ -51,9 +65,9 @@ do
     # rss construction
 
     echo "<item>" >> rss.xml
-    echo "<title>splog</title>" >> rss.xml
-    echo "<link>https://s.panrucker.co</link>" >> rss.xml
-    echo "<guid>https://s.panrucker.co/$filename.html</guid>" >> rss.xml
+    echo "<title>$filename</title>" >> rss.xml
+    echo "<link>$site_url<link>" >> rss.xml
+    echo "<guid>$site_url/$filename.html</guid>" >> rss.xml
     echo "<description><![CDATA[" >> rss.xml
    
 
@@ -95,12 +109,12 @@ do
             echo "<a href=\"$(($pagenum + 1)).html\">before &darr;</a>" >> $target.html
         fi
         echo "</p>" >> $target.html
-        cat end.htm_ >> $target.html
+        sed -e "s|{{SITE_FOOTER}}|$site_footer|" end.htm_ >> $target.html
 
     fi
 
 
-    cat end.htm_ >> $filename.html
+    sed -e "s|{{SITE_FOOTER}}|$site_footer|" end.htm_ >> $filename.html
 
     # close rss
     echo "]]></description>" >> rss.xml

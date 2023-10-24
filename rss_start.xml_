@@ -1,5 +1,5 @@
 <rss version="2.0">
 <channel>
-<title>splog</title>
-<link>https://s.panrucker.co</link>
-<description>music, photography, thoughts</description>
+<title>{{SITE_NAME}}</title>
+<link>{{SITE_URL}}</link>
+<description><![CDATA[{{SITE_DESCRIPTION}}]]></description>
