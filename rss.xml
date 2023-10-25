@@ -10,6 +10,7 @@
 <guid>https://spanrucker.github.io/sp-log/2023-10-25-tiny-trouble.html</guid>
 <description><![CDATA[
 New audio post on splog
+<p>experimenting with using the digitakt as midi and fx hub for the perfourmer, as well as playing a simple field recording of a leave being crumpled. I made the left input on the digitakt have zero effects and the right input have full effects sends (reverb and delay) so on the performer I could use the panning knob as a kind of effect send - left being fully dry signal, right being wet.</p>
 ]]></description>
 <pubDate>Wed, 25 Oct 2023 00:00:00 +0100</pubDate>
 </item>
