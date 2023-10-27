@@ -62,23 +62,24 @@ do
     echo "<p><a href="$filename.html">$filename</a></p>" >> $target.html
     echo "<p><strong>$filename</strong></p>" >> $filename.html
 
-    # rss construction
-
-    echo "<item>" >> rss.xml
-    echo "<title>$filename</title>" >> rss.xml
-    echo "<link>$site_url</link>" >> rss.xml
-    echo "<guid>$site_url/$filename.html</guid>" >> rss.xml
-    echo "<description><![CDATA[" >> rss.xml
-   
+    # rss
+    if [[ $postnum -lt 10 ]]; then
+        echo "<item>" >> rss.xml
+        echo "<title>$filename</title>" >> rss.xml
+        echo "<link>$site_url/$filename.html</link>" >> rss.xml
+        echo "<guid>$site_url/$filename.html</guid>" >> rss.xml
+        echo "<description>New post on $site_name</description>" >> rss.xml
+        date=$(date -Rd "${filename:0:10}")
+        echo "<pubDate>$date</pubDate>" >> rss.xml 
+        echo "</item>" >> rss.xml
+    fi
 
     # output html for each filetype
 
     if [[ "$extension" == "mp3" ]]; then
         echo "<p><audio src=\"$file\" controls>$file</audio></p>" | tee -a $target.html >>$filename.html
-        echo "New audio post on splog" >>rss.xml
     elif [[ "$extension" == "md" ]]; then
         cmark --unsafe ${file} | tee -a $target.html >>$filename.html 
-        echo "New text post on splog" >>rss.xml
 
     elif [[ "$extension" == "jpg" ]] || [[ "$extension" == "JPG" ]]; then
         if [ ! -d "./image/big" ]; then
@@ -89,13 +90,12 @@ do
         convert $file -resize "2400>" ./image/big/$filename.jpg
         fi
         echo "<p><a href=\"./image/big/$filename.jpg\"><img alt="$filename" src=\"./image/$filename.jpg\"></a>" | tee -a $target.html >>$filename.html 
-        echo "New image post on splog" >>rss.xml
     fi
 
     # add caption if .txt file found
 
     if [ -f $caption ]; then
-        cmark $caption | tee -a $target.html >>$filename.html >>rss.xml
+        cmark $caption | tee -a $target.html >>$filename.html
     fi
 
     # page construction end
@@ -116,11 +116,7 @@ do
 
     sed -e "s|{{SITE_FOOTER}}|$site_footer|" end.htm_ >> $filename.html
 
-    # close rss
-    echo "]]></description>" >> rss.xml
-    date=$(date -Rd "${filename:0:10}")
-    echo "<pubDate>$date</pubDate>" >> rss.xml 
-    echo "</item>" >> rss.xml
+
 done
 
 cat rss_end.xml_ >> rss.xml
