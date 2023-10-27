@@ -51,7 +51,8 @@ do
         fi
     fi
     
-    sed -e "s|{{SITE_NAME}}|$site_name|
+    sed -e "s|{{SITE_URL}}|$site_name|
+        s|{{SITE_NAME}}|$site_name|
         s|{{SITE_DESCRIPTION}}|$site_description|" start.htm_ > $filename.html
 
     # entry construction
