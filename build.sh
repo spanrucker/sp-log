@@ -42,7 +42,8 @@ do
     fi
 
     if [[ $remainder = 0 ]]; then
-        sed -e "s|{{SITE_NAME}}|$site_name|
+        sed -e "s|{{SITE_URL}}|$site_url|
+        s|{{SITE_NAME}}|$site_name|
         s|{{SITE_DESCRIPTION}}|$site_description|" start.htm_ > $target.html
                 if [[ $pagenum -eq 1 ]]; then
             echo "<p><a href=\"/\">after &uarr;</a></p>" >> $target.html
@@ -51,7 +52,7 @@ do
         fi
     fi
     
-    sed -e "s|{{SITE_URL}}|$site_name|
+    sed -e "s|{{SITE_URL}}|$site_url|
         s|{{SITE_NAME}}|$site_name|
         s|{{SITE_DESCRIPTION}}|$site_description|" start.htm_ > $filename.html
 
