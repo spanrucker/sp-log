@@ -17,11 +17,17 @@ posts=( $list )
 target=index
 pagemax=$posts_per_page
 
+# tidyup
 
+rm *.html
+
+# start rss
 
 sed -e "s|{{SITE_NAME}}|$site_name|
     s|{{SITE_URL}}|$site_url|
     s|{{SITE_DESCRIPTION}}|$site_description|" rss_start.xml_ > rss.xml
+
+# for each post
 
 for file in $list 
 do
@@ -63,18 +69,6 @@ do
     # entry link / title
     echo "<p><a href="$filename.html">$filename</a></p>" >> $target.html
     echo "<p><strong>$filename</strong></p>" >> $filename.html
-
-    # rss
-    if [[ $postnum -lt 10 ]]; then
-        echo "<item>" >> rss.xml
-        echo "<title>$filename</title>" >> rss.xml
-        echo "<link>$site_url/$filename.html</link>" >> rss.xml
-        echo "<guid>$site_url/$filename.html</guid>" >> rss.xml
-        echo "<description>New post on $site_name</description>" >> rss.xml
-        date=$(date -Rd "${filename:0:10}")
-        echo "<pubDate>$date</pubDate>" >> rss.xml 
-        echo "</item>" >> rss.xml
-    fi
 
     # output html for each filetype
 
@@ -118,8 +112,22 @@ do
 
     sed -e "s|{{SITE_FOOTER}}|$site_footer|" end.htm_ >> $filename.html
 
+    # rss
+    
+    if [[ $postnum -lt 10 ]]; then
+        echo "<item>" >> rss.xml
+        echo "<title>$filename</title>" >> rss.xml
+        echo "<link>$site_url/$filename.html</link>" >> rss.xml
+        echo "<guid>$site_url/$filename.html</guid>" >> rss.xml
+        echo "<description>New post on $site_name</description>" >> rss.xml
+        date=$(date -Rd "${filename:0:10}")
+        echo "<pubDate>$date</pubDate>" >> rss.xml 
+        echo "</item>" >> rss.xml
+    fi
 
 done
 
 cat rss_end.xml_ >> rss.xml
+
+
 
