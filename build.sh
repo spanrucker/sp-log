@@ -21,6 +21,10 @@ pagemax=$posts_per_page
 
 rm *.html
 
+if [ ! -d "./image/big" ]; then
+mkdir -p ./image/big
+fi
+
 # start rss
 
 sed -e "s|{{SITE_NAME}}|$site_name|
@@ -78,10 +82,8 @@ do
         cmark --unsafe ${file} | tee -a $target.html >>$filename.html 
 
     elif [[ "$extension" == "jpg" ]] || [[ "$extension" == "JPG" ]]; then
-        if [ ! -d "./image/big" ]; then
-        mkdir -p ./image/big
-        fi
-        if [ ! -f ./image/$filename.jpg ]; then
+  
+        if [ ! -f ./image/$filename.jpg ] ; then
         convert $file -resize "800>" ./image/$filename.jpg
         convert $file -resize "2400>" ./image/big/$filename.jpg
         fi
@@ -113,7 +115,7 @@ do
     sed -e "s|{{SITE_FOOTER}}|$site_footer|" end.htm_ >> $filename.html
 
     # rss
-    
+
     if [[ $postnum -lt 10 ]]; then
         echo "<item>" >> rss.xml
         echo "<title>$filename</title>" >> rss.xml
