@@ -5,6 +5,13 @@
 <description><![CDATA[simon panrucker's creative log]]></description>
 <atom:link href="https://spanrucker.github.io/sp-log/rss.xml" rel="self" type="application/rss+xml" />
 <item>
+<title>2023-10-27-memory-bot</title>
+<link>https://spanrucker.github.io/sp-log/2023-10-27-memory-bot.html</link>
+<guid>https://spanrucker.github.io/sp-log/2023-10-27-memory-bot.html</guid>
+<description>New post on simon's log</description>
+<pubDate>Fri, 27 Oct 2023 00:00:00 +0100</pubDate>
+</item>
+<item>
 <title>2023-10-25-tiny-trouble</title>
 <link>https://spanrucker.github.io/sp-log/2023-10-25-tiny-trouble.html</link>
 <guid>https://spanrucker.github.io/sp-log/2023-10-25-tiny-trouble.html</guid>
@@ -59,13 +66,6 @@
 <guid>https://spanrucker.github.io/sp-log/2023-10-08.html</guid>
 <description>New post on simon's log</description>
 <pubDate>Sun, 08 Oct 2023 00:00:00 +0100</pubDate>
-</item>
-<item>
-<title>2023-07-01</title>
-<link>https://spanrucker.github.io/sp-log/2023-07-01.html</link>
-<guid>https://spanrucker.github.io/sp-log/2023-07-01.html</guid>
-<description>New post on simon's log</description>
-<pubDate>Sat, 01 Jul 2023 00:00:00 +0100</pubDate>
 </item>
 </channel>
 </rss>
