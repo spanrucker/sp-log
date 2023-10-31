@@ -77,9 +77,9 @@ do
     # output html for each filetype
 
     if [[ "$extension" == "mp3" ]]; then
-        echo "<p><audio src=\"$file\" controls>$file</audio></p>" | tee -a $target.html >>$filename.html
+        echo "<p><audio src=\"$file\" controls preload="none">$file</audio></p>" | tee -a $target.html >>$filename.html
     elif [[ "$extension" == "md" ]]; then
-        cmark --unsafe ${file} | tee -a $target.html >>$filename.html 
+        cmark ${file} | tee -a $target.html >>$filename.html 
 
     elif [[ "$extension" == "jpg" ]] || [[ "$extension" == "JPG" ]]; then
   
@@ -87,7 +87,7 @@ do
         convert $file -resize "800>" ./image/$filename.jpg
         convert $file -resize "2400>" ./image/big/$filename.jpg
         fi
-        echo "<p><a href=\"./image/big/$filename.jpg\"><img alt="$filename" src=\"./image/$filename.jpg\"></a>" | tee -a $target.html >>$filename.html 
+        echo "<p><a href=\"./image/big/$filename.jpg\"><img alt="$filename" src=\"./image/$filename.jpg\" loading="lazy"></a>" | tee -a $target.html >>$filename.html 
     fi
 
     # add caption if .txt file found
